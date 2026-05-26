@@ -3,7 +3,7 @@ from src.database.config import supabase
 import time
 
 
-@st.dialog("Enroll in Subject")
+@st.dialog("Quick Enrollment")
 def auto_enroll_dialog(subject_code):
     student_id = st.session_state.student_data["student_id"]
     res = supabase.table("subjects").select("subject_id, name").eq("subject_code" , subject_code).execute()
@@ -30,7 +30,7 @@ def auto_enroll_dialog(subject_code):
             st.rerun()
         return  
     with col2:
-        if st.button("YOu enroll now!" , width = "stretch"):
+        if st.button("You enroll now!" , width = "stretch"):
                      enroll_student_to_subject(student_id ,subject["subject_id"] )
                      st.success("Joined Successfully")
                      st.query_params.clear()

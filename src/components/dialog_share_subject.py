@@ -7,7 +7,7 @@ def share_subject_dialog(subject_name , subject_code):
     app_domain = "snapclass-rahul-main.streamlit.app"
     join_url = f"{app_domain}/join-code-{subject_code}"
 
-    st.header("Scann to Join")
+    st.header("Scan to Join")
 
     qr = segno.make(join_url)
     out = io.BytesIO()
@@ -18,7 +18,7 @@ def share_subject_dialog(subject_name , subject_code):
         st.markdown("### Copy Link")
         st.code(join_url , language="text")
         st.code(subject_code, language="text")
-        st.info("Copy this link to share on whatsap[ or Email")
+        st.info("Copy this link to share on whatsapp or Email")
     with col2:
         st.markdown("### Scan to Join")
         st.image(out.getvalue(), caption = "QRCODE for class joining ")
