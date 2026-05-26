@@ -52,7 +52,7 @@ def style_base_layout():
                 font-family:"Outfit" ,sans-serif !important; 
                 }   
                 button{
-                background:  #5865F2 !important;
+                background-color:  #5865F2 !important;
                 border-radius:1.5rem !important;
                 color:white !important;
                 padding:10px 20px !important;
@@ -60,15 +60,15 @@ def style_base_layout():
                 tansition:tansform 0.25s ease-in-out !important;}     
 
                 button[kind= "secondary"]{
-                background:   #EB459E!important;
+                background-color:   #EB459E!important;
                 border-radius:1.5rem !important;
                 color:white !important;
                 padding:10px 20px !important;
                 border:none !important;
                 tansition:tansform 0.25s ease-in-out !important;}    
 
-                button["tertiary"]{
-                background: black !important;
+                button[kind ="tertiary"]{
+                background-color: black !important;
                 border-radius:1.5rem !important;
                 color:white !important;
                 padding:10px 20px !important;
